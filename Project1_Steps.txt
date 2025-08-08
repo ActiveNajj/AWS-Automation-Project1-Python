@@ -1,0 +1,41 @@
+1- Create a new VPC.
+2- Create public subnets.
+3- Enable auto-assign public IP addresses for public subnets.
+4- Create private subnets.
+5- Create the Internet Gateway.
+6- attach the Internet Gateway to the new VPC.
+7- Create route table for public subnets to route traffic through Internet Gateway.
+8- Associate public subnets to public route table.
+9- Add the default route in public route table towards Internet Gateway.
+10- Create NAT Gateway for private subnets.
+11- Create route table for private subnets to route traffic through NAT Gateway.
+12- Associate private subnets to private route table.
+13- Ensuring NAT Gateway are up and available.
+14- Add the default route in private route tables towards NAT Gateway
+15- Create the required security group for EC2 instances.
+16- Add security group ingress/inbound rules for ports [22,80,443].
+17- Add egress/outbound rule to the WebSG - allowing traffic for updates and download any required packages.
+18- Launch EC2 instances in public subnets.
+19- Ensuring all instances are in running State.
+20- Create Client Objects for other Services like Load Balancer , Auto Scaling, and RDS:-
+    A- Create a client Object for Elastic Load Balancing.
+    B- Create a client object for Auto Scaling.
+    C- Create a client for RDS.
+21 - Create a target group.
+22 - Register EC2 (targets) to the target group.
+23 - Create an application load balancer:-
+    A- Create the Load balancer Security Group.
+    B- add ingress/inbound rule to the ALB SG , allowing HTTP Traffic inbound.
+    C- add egress/outbound rules to the ALB SG - allowing outbound port 80 towards WebSG security group.
+    D- creating the ALB itself.
+    E- Ensuring Load Balancer is available and up.
+24- Create a listener for the load balancer.
+25- Configure the auto-scaling group:-
+    A- Create the Launch Configuration.
+    B- Crate the auto-scaling group.
+26 - create the RDS DataBase in private subnets and its security group:-
+    A- Create a DB security group.
+    B- Authorize inbound access to the DB security group from only WebSG security group.
+    C - Create the DB Subnet Group.
+    D- Launch The Multi-AZ RDS database.
+
