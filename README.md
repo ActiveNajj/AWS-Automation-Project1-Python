@@ -1,2 +1,2 @@
-In this project, I will create the IaaS and PaaS infrastructure required to host a multi-tier web application in AWS VPC.
+In this project(Requirement): I will architect and provision the Infrastructure as a Service (IaaS) and Platform as a Service (PaaS) components necessary to deploy a resilient multi-tier web application as in Project1_Description.pdf Requirement within an Amazon Web Services (AWS) Virtual Private Cloud (VPC), as the HLD architecture below.
 <img alt="image" src="https://github.com/user-attachments/assets/d7c4ad9c-4238-4b53-ad21-dfd9985cc930" />
